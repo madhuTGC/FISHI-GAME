@@ -1,0 +1,1089 @@
+/* body {
+	background-image: -webkit-linear-gradient(top, #00C5D9, #066A9B);
+	background-image: -moz-linear-gradient(top, #00C5D9, #066A9B);
+	background-image: -ms-linear-gradient(top, #00C5D9, #066A9B);
+	background-image: -o-linear-gradient(top, #00C5D9, #066A9B);
+	background-image: linear-gradient(top, #00C5D9, #066A9B);
+	font-family: 'Patrick Hand', cursive;
+  letter-spacing: 0.25px;
+	font-size: 21px;
+	margin: 0;
+	padding: 0;
+  height: 100vh;
+	color: white;
+	overflow: hidden;
+} */
+body{
+	overflow: hidden;
+}
+.start-page{
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background-image: url("../finnyfishAssets/9470359_4161563.jpg");
+	background-position: center center;
+	background-size: 100% 100%;
+	overflow: hidden;
+	opacity: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10%;
+}
+img#start-title {
+	font-family: 'Black Ops One', cursive;
+	font-weight: 300;
+	color: #0f4d92;
+	height: auto;
+	width: 25%;
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.loader {
+border: 6px solid #f3f3f3;
+border-top: 6px solid #3498db;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+-webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+	}
+.welcome {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px; 
+    z-index: 2; 
+	display: none;
+}
+
+
+#close {
+	position: absolute;
+    top: 1%;
+    right: 7%;
+    float: right;
+    font-size: 3rem;
+    font-weight: 700;
+	color: #7eb5f5;
+	cursor: pointer;
+}
+
+.welcome img {
+    width: 100%;
+    height: auto;
+}
+
+.start-page {
+    position: relative;
+}
+
+.blur {
+    filter: blur(10px);
+}
+
+.hide {
+    display: none;
+}
+#game-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+	position: absolute;
+	text-align: center;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+#game-stats {
+	font-size: 24px;
+	position: absolute;
+	/* left: 28px;
+	top: 28px; */
+	color: #FFF;
+	/* min-width: 100px;
+	min-height: 180px; */
+	padding: 20px;
+	/* border-radius: 20px; */
+	/* border: 4px solid white; */
+	display: none;
+	text-align: left;
+	flex-direction: column;
+	align-items: center;
+}
+#game-day {
+	font-family: 'Black Ops One', cursive;
+}
+#game-score {
+	/* margin-top: 8px; */
+	font-size: 1rem;
+	font-weight: 500;
+	display:block;
+	position: absolute;
+	top: 40%;
+	left: 55%;
+	display: block;
+	color: #000;
+	z-index: 3;
+	transform: rotate(180deg) scaleY(-1);
+
+	
+}
+#assessment-score {
+	/* margin-top: 8px; */
+	font-size: 1rem;
+	font-weight: 500;
+	display:block;
+	position: absolute;
+	top: 40%;
+	left: 55%;
+	display: block;
+	color: #000;
+	z-index: 3;
+
+	
+}
+/* .chances{
+	background-image: url(../finnyfishAssets/lifeBg.png);
+	background-position: center center;
+	background-size: 100% 100%;
+	height: auto;
+	width: 18vw;
+	display: flex;
+	align-items: center;
+	padding: 0.8rem 1.7rem;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	display: none;
+	
+  }
+  .chance{
+	height: 5vh;
+	width: 2.5vw;
+	cursor: pointer;
+	opacity: 1;
+  } */
+  .chances {
+    background-image: url(../finnyfishAssets/lifeBg.png);
+    background-position: center center;
+    background-size: 100% 100%;
+    height: auto;
+    width: 90%; /* Adjust as needed for responsiveness */
+    max-width: 300px; /* Set a maximum width if necessary */
+    display: none;
+    justify-content: space-around; /* Adjust alignment as needed */
+    align-items: center;
+    padding: 0.8rem 1.7rem;
+    position: relative;
+    margin: 0 auto; /* Center the container horizontally */
+	z-index: 2;
+}
+
+.chance {
+    height: auto;
+    width: 15%; /* Adjust as needed for responsiveness */
+    max-width: 50px; /* Set a maximum width if necessary */
+    cursor: pointer;
+    opacity: 1;
+}
+
+  .life {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px; 
+	z-index: 2; 
+	display: none;
+  }
+  
+  .life .close {
+	position: absolute;
+	top: 4%;
+	right: 5%;
+	font-size: 3rem;
+	font-weight: 600;
+	cursor: pointer;
+  }
+  
+  .life img {
+	width: 40vw;
+	height: auto;
+	border: 0.4rem solid #F57;
+	border-radius: 2.5rem;
+  }
+  
+  .blur {
+	filter: blur(10px);
+  }
+  
+  .hide {
+  display: none;
+  }
+.scorebg{
+	background-image: url(../finnyfishAssets/Score.png);
+	background-position: center center;
+	background-size: 100% 100%;
+	height: 6rem;
+	width: 12rem;
+	align-items: center;
+	position: absolute;
+	left: 85%;
+	top: 5%;
+	display: none;
+	z-index: 2;
+	transform: rotate(180deg) scaleY(-1);
+}
+
+.assessment-scorebg{
+	background-image: url(../finnyfishAssets/Score.png);
+	background-position: center center;
+	background-size: 100% 100%;
+	height: 6rem;
+	width: 12rem;
+	align-items: center;
+	position: absolute;
+	right: 85%;
+	top: 5%;
+	display: none;
+	z-index: 2;
+}
+#game-goal {
+	display: none;
+	font-size: 32px;
+	position: absolute;
+	top: 28px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: 4px solid white;
+	margin: 0;
+}
+#click-container{
+	display: none;
+	position: relative;
+	/* bottom: 20%; */
+	height: 100vh;
+	max-width: 100%;
+	width: 100vw;
+	margin: 0 auto;
+	/* cursor: none; */
+	overflow: hidden;
+}
+#line{
+	display: block;
+	position:absolute;
+	height: 100vh;
+	width: 40px;
+	/* background-color: white; */
+	background-image: url(../finnyfishAssets/hookString.png);
+	background-position: center  center;
+	background-size: 100% 100%;
+	transform: translate(-5%,-100%);
+	/* margin-left: 8px; */
+	/* margin-top: -12px; */
+	z-index: 1;
+}
+#line:after {
+	content:"";
+	display:block;
+	height: 65px;
+	width: 65px;
+	position: absolute;
+	bottom: -40px;
+	left:-15px;
+	background-image: url("../finnyfishAssets/fishHook.png");
+	background-position: center  center;
+	background-size: 100% 100%;
+}
+#line.zapped {
+	border: 1.5px #ffff33 solid;
+}
+h1 {
+	margin: 0;
+	padding: 20px;
+}
+img#start-btn {
+	cursor:pointer;	
+	height: auto;
+	width: 10%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+/* button#start-btn .arrow {
+	display: block;
+	border-color: transparent white;
+  border-style: solid;
+  border-width: 30px 0px 30px 60px;
+} */
+
+
+.fish {
+	width: 120px;
+	height: 90px;
+	background-image: url(../finnyfishAssets/Fish_left.png);
+	background-position: center center;
+	background-size: 100% 100%;
+    border-radius: 50%;
+	position: absolute;
+	transition: left 0.1s linear, top 0.1s linear, opacity 1s linear;
+	animation-name: appear;
+    animation-duration: 0.5s;
+}
+
+.fish:after {
+  content:"";
+  background-image: url(../finnyfishAssets/Fish_left.png);
+  background-position: center center;
+  background-size: 100% 100%;
+  transform-origin: center left;
+  position: absolute;
+  right: -15%;
+  top: -15%;
+}
+.fish:before,
+.rare-fish:before{
+  content: "";
+  height: 8px;
+  width: 8px;
+  display: block;
+  top: 50%;
+  position: absolute;
+  left: 10%;
+}
+.rare-fish {
+	width:200px;
+	height: 170px;
+	background-image: url(../finnyfishAssets/Star\ Fish.png);
+  background-position: center center;
+  background-size: 100% 100%;
+	position: absolute;
+	transition: left 0.2s linear, top 0.1s linear, opacity 1s linear;
+	animation-name: appear;
+  animation-duration: 0.5s;
+  filter: drop-shadow( 0.2rem 0.2rem 10px gold);
+}
+.black-fish {
+	width: 100px;
+	/* border-radius:50% 50% 25% 25%; */
+	height: 70px;
+	/* background-color: rgba(255,255,255,0.3333); */
+	background-image: url(../finnyfishAssets/BlackFish.png);
+	background-size: 100% 100%;
+	background-position: center center;
+	position: absolute;
+	transition: all 1s;
+	/* transform: rotate(-90deg); */
+	  /* animation-name: appear; */
+	  /* animation-duration: 1s;
+	  animation-timing-function: linear; */
+  }
+  .black-fish:before {
+	content: "";
+	width: 15px;
+	height: 8px;
+	border-radius: 10%;
+	/* background-color: #C70437; */
+	position:absolute;
+	left: 50%;
+	top: -8px;
+	transform: translateX(-50%);
+  
+  }
+  .black-fish:after {
+	content: "";
+	width: 30px;
+	height: 50px;
+	border-radius: 25% 25% 30% 30%;
+	/* background-color: rgba(255,255,255,0.3333); */
+	/* position: absolute;
+	top: 40px; */
+	position: absolute;
+	right: -15%;
+	top: -15%;
+  }
+/* .black-fish {
+	width: 100px;
+	height: 70px;
+	background-image: url(../finnyfishAssets/BlackFish.png);
+  background-position: center center;
+  background-size: 100% 100%;
+	position: absolute;
+	transition: left 0.2s linear, top 0.1s linear, opacity 1s linear;
+	animation-name: appear;
+  animation-duration: 0.5s;
+  
+} */
+.rare-fish:after {
+	content:"";
+	background-image: url(../finnyfishAssets/Star\ Fish.png);
+  background-position: center center;
+  background-size: 100% 100%;
+  transform-origin: center left;
+  position: absolute;
+  right: -15%;
+  top: -15%;
+}
+/* .black-fish:after {
+	content:"";
+	background-image: url(../finnyfishAssets/BlackFish.png);
+  background-position: center center;
+  background-size: 100% 100%;
+  transform-origin: center left;
+  position: absolute;
+  right: -15%;
+  top: -15%;
+} */
+/* .rare-fish:after {
+	background-image: url(../finnyfishAssets/Dolphin.png);
+  background-position: center center;
+  background-size: 100% 100%;
+} */
+.fish.left,
+.rare-fish.left{
+	transform: scaleX(-1) ;
+	animation-name: appear;
+  animation-duration: 0.5s;
+}
+.black-fish.right{
+	transform: scaleX(-1);
+}
+/* .shark.left {
+	transform: scaleX(-1);
+	animation-name: appear;
+  animation-duration: 0.5s;
+} */
+
+.fish.caught,
+.rare-fish.caught,
+.black-fish.caught,.black-fish.caught {
+	animation: pull-up 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.fish.disappear,
+.rare-fish.disappear,
+.black-fish.disappear,
+.jellyfish.disappear,
+.shark.disappear,.black-fish.disappear{
+	animation: disappear 0.35s;
+  animation-fill-mode: forwards;
+}
+
+
+/* .jellyfish {
+	width: 80px;
+	height: 100px;
+	background-image:url(../images/jellyfish.svg);
+	background-size: contain;
+	position: absolute;
+	transition: left 0.1s linear, top 0.1s linear, opacity 1s linear;
+	animation-name: floatUp;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+} */
+.shark {
+	width: 240px;
+	height: 128px;
+	background-image:url(../images/shark.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	transition: left 0.1s linear, top 0.1s linear, opacity 1s linear;
+	animation-name: floatUp;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+}
+.hit-text {
+	font-size: 28px;
+	position: absolute;
+	z-index: 2;
+	top: -20px;
+	animation-name: floatUp;
+	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  from {
+  	opacity: 0;
+  }
+  to {
+  	opacity: 1;
+  }
+}
+@keyframes disappear {
+  from {
+  	opacity: 2;
+  }
+  to {
+  	opacity: 0;
+  }
+}
+@keyframes float {
+  0% {
+  	opacity: 0;
+  	margin-left: 0px;
+  	margin-top: -20px
+  }
+  25% {
+  	opacity: 0.25;
+  	margin-left: -10px;
+  	margin-top: -15px
+  }
+  50% {
+  	opacity: 0.5;
+  	margin-left: 0px;
+  	margin-top: -10px
+  }
+  75% {
+  	opacity: 0.75;
+  	margin-left: 10px;
+  	margin-top: -5px
+  }
+  100% {
+  	opacity: 1;
+  	margin-left: 0px;
+  	margin-top: 0px;
+  }
+}
+@keyframes floatUp {
+  0% {
+  	opacity: 0;
+  	margin-left: 0px;
+  	margin-top: 20px
+  }
+  25% {
+  	opacity: 0.25;
+  	margin-left: -10px;
+  	margin-top: 15px
+  }
+  50% {
+  	opacity: 0.5;
+  	margin-left: 0px;
+  	margin-top: 10px
+  }
+  75% {
+  	opacity: 0.75;
+  	margin-left: 10px;
+  	margin-top: 5px
+  }
+  100% {
+  	opacity: 1;
+  	margin-left: 0px;
+  	margin-top: 0px;
+  }
+}
+
+@keyframes pull-up {
+	from {
+		margin-top: 0;
+		opacity: 1;
+	}
+	to {
+		margin-top: -50px;
+		opacity:0;
+	}
+}
+
+@keyframes point {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#bubbles {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bubbles div {
+  border: solid 2px rgba(255,255,255,0.125);
+  border-radius: 100%;
+  position: absolute;
+  visibility: hidden;
+  animation: fade 10s infinite;
+}
+
+@keyframes fade {
+  from {
+    bottom: -24px;
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    bottom: 120%;
+  }
+}
+
+#clock {
+	position: absolute;
+	left: -3%;
+	top: 3%;
+	display: none;
+	height: 8rem;
+	width: 8rem;
+
+}
+/* timer */
+svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.chart-gauge {
+  font-size: 2.5rem;
+  /* letter-spacing: 4px; */
+  text-anchor: middle;
+  dominant-baseline: central;
+	alignment-baseline: middle;
+  /* stroke-linecap: round; */
+}
+.timer-time {
+	fill: #000;
+	transition: 3s;
+}
+.timer-time.warning {
+	fill: #ff5252;
+	/* animation: shake 0.2s infinite; */
+}
+/* .timer-backdrop {
+	transform: rotate(-90deg);
+	transform-origin: center;
+  fill: none;
+  stroke: rgba(255,255,255,.2);
+  stroke-width: 5;
+} */
+.timer-gauge {
+	/* transform: rotate(-90deg); */
+	/* transform-origin: center; */
+  fill: none;
+  stroke: #000;
+  /* stroke-width: 5; */
+  /* animation-iteration-count: infinite; */
+  /* stroke-dashoffset: 0;
+  stroke-dasharray: 250; */
+	/* transition: 14s linear; */
+}
+.timer-gauge.ticking {
+	stroke-dashoffset: 250;
+}
+
+@keyframes fill {
+  0%   { stroke-dashoffset: 360; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* @keyframes shake {
+	0% { letter-spacing:4px; }
+	50% { letter-spacing:0px; }
+	100% { letter-spacing:4px; }
+} */
+
+/* 
+.score-box,#file {
+	position: absolute;
+	top: 0.7rem;
+	right: 0.7rem;
+	background-color: #fff; 
+	font-family: cursive;
+	padding: 0.3rem 0.5rem;
+	border: 0.3rem solid yellow; 
+	border-radius: 1rem;
+	font-weight: bold;
+	font-size: 1.5rem;
+	z-index: 1; 
+	color: yellow;
+  }
+  .board{
+	height: 60vh; 
+	width: 60vh;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 20px;
+  } */
+  .score-box, #file {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: #fff;
+    font-family: cursive;
+    padding: 0.5rem 1rem;
+    border: 0.3rem solid yellow;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 1;
+    color: yellow;
+}
+
+.board {
+    height: 60vw;
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cursor {
+    height: 10vw;
+    width: 5vw;
+    position: absolute;
+    top: 10vw;
+    left: 10vw;
+    background-image: url('../assets/new_hammer.png');
+    background-size: contain;
+    transition: transform 0.1s;
+    pointer-events: none;
+}
+
+
+
+  
+  @keyframes rise {
+	0%{
+		transform: translateX(-50%) translateY(100%);
+	}
+	100%{
+		transform: translateX(-50%) translateY(0);
+	}
+  }
+  #questionModal{
+	overflow-y: auto;
+	height: 100%;
+	padding-left: 0px;
+  }
+  
+  /* .cursor{
+	height: 15vh;
+	width: 7vw;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	background-image: url('../assets/new_hammer.png');
+	background-size: 100% 100%;
+	transform: translate(-20%, -20%);
+	transition: transform .1s;
+	pointer-events: none;
+  } */
+  .cursor.active{
+	transform: translate(-20%, -20%) rotate(-45deg);
+  }
+  
+  
+  /* Modal CSS */
+  .custom-modal-dialog {
+	max-width: 100%; 
+	width: 50vw; 
+	overflow-y: hidden;
+	
+  }
+  
+  .modal-content {
+  background-color: #000;
+  background-size: 100% 100%;
+  width:100%; 
+  max-width: 100%; 
+  
+  }
+  #error-text {
+	color: #c30202;
+	font-size: 1rem;
+	margin-top: 10px;
+	font-weight: 500;
+	text-align: center;
+  }
+  
+  #modal-content-border{
+	border: 0.2rem solid #F57A07;
+	border-radius: 1.25rem;
+  }
+  
+  .modalheader {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: end;
+	padding: var(--bs-modal-header-padding);
+	border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color); 
+	border-top-left-radius: var(--bs-modal-inner-border-radius);
+	border-top-right-radius: var(--bs-modal-inner-border-radius);
+	border-radius: 1rem;
+	background-image: url(../finnyfishAssets/Modal_header_bg.gif);
+	background-position: center center;
+	background-size: 100% 100%;
+  
+  }
+  
+  
+  
+  
+  /* #timer-icon {
+  
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  left:0%;
+  z-index: 1;
+  } */
+  
+  
+  .modal-body {
+  text-align: center;
+  }
+  
+  
+  #contentDiv{
+  height: auto;
+  /* max-height: 25vh; */
+  /* margin: 2%; */
+  margin: 0% 0% 1% 0%;
+  
+  
+  }
+  
+  
+  
+  @keyframes fadeInLeft {
+  from {
+  opacity: 0;
+  transform: translateX(-100%);
+  }
+  to {
+  opacity: 1;
+  transform: translateX(0);
+  }
+  }
+  
+  @keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+  transform: translateY(0);
+  }
+  40% {
+  transform: translateY(-10px);
+  }
+  60% {
+  transform: translateY(-5px);
+  }
+  }
+  
+  .radio-container label {
+   margin-bottom: 10px;
+   border-radius: 17px;
+   /* background-color: rgb(233, 236, 210); */
+   color: #000;
+   padding: 0.3rem;
+   cursor: pointer;
+   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+   text-align: left;
+   width: 100%;
+   box-sizing: border-box;
+   animation: fadeInLeft 0.5s ease;
+   border: 0.15rem solid #F57A07;
+   font-weight: 500;
+  }
+  
+  .radio-container label:hover {
+  background-color: #fff2b7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  
+  
+  input[type="radio"] {
+	accent-color:  #F57A07; 
+	margin-right: 0.3rem;
+  }
+  
+  
+  #continueButton {
+	background-image: url(../finnyfishAssets/Submit_Button.png);
+	background-position: center center;
+	background-size: 100% 100%;
+	cursor: pointer;
+	height: 12vh;
+	width: 15vw;
+  }
+  
+  .hide {
+	display: none;
+  }
+  
+  .radio-container {
+	padding: 0% 3%;
+  }
+  
+  .modal-body {
+	text-align: center;
+  }
+  
+  #questionText {
+	font-weight: 500;
+	margin-bottom: 0.1rem;
+	color: white;
+	text-align: left;
+	/* background-color: #F57A07; */
+	border: 0.15rem solid #F57A07;
+	background-color: #FFD43A;
+	border-radius: 17px;
+	padding: 0.5rem;
+	height: auto;
+	animation: fadeInLeft 0.5s ease;
+  
+  }
+  
+  
+  
+  .timerContainer {
+	color: #F57A07;
+	font-size: 1rem;
+	font-weight: 500;
+	/* background-color: white; */
+	/* margin-top: 0.5rem; */
+	width: 6vw;
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-right: 0.5rem; */
+	padding-right: 1.1rem;
+	animation: fadeInLeft 0.5s ease;
+	background-image: url(../finnyfishAssets/Timer_Logo.png);
+	background-position: center center;
+	background-size: 100% 100%;
+	position: relative;
+	left: 55%;
+  }
+
+  .logo {
+	background-image: url(../finnyfishAssets/Logo_fish.png);
+	background-position: center center;
+	background-size: 100% 100%;
+	position: relative;
+	right: 45%;
+	width: 20vw;
+	height: 12vh;
+  }
+  
+  .gifContainer{
+	height: 8.5vh;
+	width: 4.5vw;
+  }
+  
+  .modal-body {
+	text-align: center;
+  }
+  
+  /* .modal-footer align {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  } */
+  
+  .modalfooter {
+	display: flex;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 0.7rem;
+
+	
+  }
+  
+  #timer-icon {
+   width: 5vh;
+   height: 5vh;
+   position: absolute;
+   left:0%;
+   z-index: 1;
+  }
+   
+  
+  
+   .popup1 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2; /* Ensure the popup appears above other elements */
+  
+  }
+  
+  .popup1 img {
+	width: 40vw;
+	height: 60vh;
+  }
+  
+  /* Add the following style to keep the blur effect */
+  /* .blur {
+	filter: blur(10px);
+  } */
+  
+  
+  .assessment-image {
+	width: 100%;
+	max-width: 100%;
+	height: 24vh;
+	border-radius: 10px;
+  }
+  .assessment-video {
+  width: 100%;
+  max-width: 100%;
+  height: 22vh;
+  }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finny Fish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/media.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+ 
+    <div id="game-container">
+        
+        <!-- Welcome Popup -->
+        <div id="welcomePopup" class="welcome hide">
+            <span id="close" onclick="closeWelcomePopup()">&times;</span>
+            <img src="./finnyfishAssets/Finny_Fish_Instructions.png" alt="Popup Image" class="no-blur">
+        </div>
+        
+        <div class="start-page">
+            <img id="start-title" src="./finnyfishAssets/Finny_Fish_Logo.png"></img>
+            <div id="info-wrapper">
+                <div id="instructions"></div>
+                <img id="start-btn" src="./finnyfishAssets/Start_Button.png"></img>
+            </div>
+        </div>
+        <!-- Loader -->
+        <div id="loader" class="loader-container">
+            <div class="loader"></div>
+        </div>
+        
+        <div class="assessment-scorebg">
+            <span id="assessment-score">Score: 0</span>
+        </div>
+        <!-- <div id="game-stats"> -->
+            <!-- <span id="game-day">Day 1</span> -->
+            
+            <div id="clock">
+                <svg viewBox="0 0 120 120" class="chart-gauge" fill="none" stroke-width="4">
+                    <!-- <circle class="timer-backdrop" r="40" cx="60" cy="60"></circle>
+                    <circle class="timer-gauge" r="40" cx="60" cy="60"></circle> -->
+                    <image xlink:href="./finnyfishAssets/Timer_Logo.png" class="timer-gauge" width="100%" height="100%" />
+                    <text y="50%" x="40%" id="game-timer" class="timer-time">15s</text>
+                </svg>
+            </div>
+            <div class="scorebg">
+                <span id="game-score">Coins: 0</span>
+            </div>
+        <!-- </div> -->
+        <p id="game-goal"></p>
+    </div>
+    <div id="lifePopup" class="life hide">
+        <span class="close" onclick="closeWelcomePopup()">&times;</span>
+        <img src="./finnyfishAssets/Lost_Life.png" alt="Popup Image" class="no-blur">
+      </div>
+    <div class="chances">
+        <img class="chance" src="./finnyfishAssets/life.gif" >
+        <img class="chance" src="./finnyfishAssets/life.gif" >
+        <img class="chance" src="./finnyfishAssets/life.gif" >
+        <img class="chance" src="./finnyfishAssets/life.gif" >
+        <img class="chance" src="./finnyfishAssets/life.gif" >
+      </div>
+    <div id="click-container">
+        <span id="line"></span>
+    </div>
+    <div id="bubbles"></div>
+    <div class="modal" tabindex="-1" role="dialog" id="questionModal" style="display:none" data-backdrop="static"> 
+        <div class="modal-dialog modal-dialog-centered custom-modal-dialog " role="document">
+            <div class="modal-content" id="modal-content-border">
+                <div class="modalheader">               
+                    <div class="timerContainer">
+                      <!-- <div class="gifContainer"> -->
+                        <!-- <img src="./assets/blinking.gif" alt="" height="100%"width="100%" > -->
+                      <!-- </div> -->
+                      <div id="timer">
+                      </div>
+                    </div>
+                    <div class="logo">
+                        
+                    </div>
+                </div>
+                <div class="modal-body">
+                  <div id='contentDiv'></div>
+                    <p id="questionText"></p>
+                </div>
+                <div class="radio-container">
+                </div>
+                <div id="error-text"></div>
+                <div class="modalfooter">
+                    <span type="button" id="continueButton" ></span>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Game Over Popup -->
+    <div id="gameOverPopup" class="popup1 hide">
+        <img src="./finnyfishAssets/Finny_Fish_Game_Over.png" alt="Game Over Image">
+    </div>
+    <script type="text/javascript" src="js/script_v2.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

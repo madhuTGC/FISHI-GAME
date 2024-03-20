@@ -1,0 +1,101 @@
+@media only screen and (max-width: 767px){
+    body{
+        overflow: hidden;
+    }
+    .start-page{
+        background-image: url("../finnyfishAssets/9470359_4161563.jpg");
+        overflow: hidden;
+    }
+    img#start-title {
+        width: 95%;
+    }
+    img#start-btn{
+        width: auto;
+    }
+    /* .start-page img{
+        height: 12vh;
+        width: auto;
+    } */
+    .welcome img {
+        width: 95vw;
+        height: auto;
+    }
+    .welcome .close {
+        right: 7%;
+        top: 1%;
+    }
+    .chances {
+        background-image: url(../finnyfishAssets/lifeBg.png);
+        background-position: center center;
+        background-size: 100% 100%;
+        height: auto;
+        width: 60%;
+        max-width: 100%;
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.8rem 1.7rem;
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .scorebg {
+        background-image: url(../finnyfishAssets/Score.png);
+        background-position: center center;
+        background-size: 100% 100%;
+        height: 9vh;
+        width: 10rem;
+        align-items: center;
+        position: absolute;
+        left: 60%;
+        top: 9%;
+        display: none;
+        z-index: 2;
+        /* transform: scaleX(-1); */
+        /* transform-origin: right; */
+        transform: rotate(180deg) scaleY(-1);
+    } #game-score{
+        transform: scaleY(-1) rotate(180deg);
+    }
+    
+    .assessment-scorebg {
+        background-image: url(../finnyfishAssets/Score.png);
+        background-position: center center;
+        background-size: 100% 100%;
+        height: 9vh;
+        width: 10rem;
+        align-items: center;
+        position: absolute;
+        right: 60%;
+        top: 9%;
+        display: none;
+        z-index: 2;
+    }
+    .rare-fish{
+        height: 160px;
+        width: 200px;
+    }
+    /* #click-container{
+        height: 100%;
+    } */
+    .score-box, #file {
+        top: 1rem;
+        right: 1rem;
+        font-size: 1rem;
+    }
+
+    .board {
+        height: 90vw;
+        width: 90vw;
+        gap: 5px;
+    }
+
+    .cursor {
+        height: 15vw;
+        width: 8vw;
+        top: 5vw;
+        left: 5vw;
+    }
+
+}
