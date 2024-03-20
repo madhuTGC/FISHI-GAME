@@ -622,6 +622,7 @@ function hit(event) {
                     hitText.innerText = "+10";
                     hitText.style.color = "red";
                     blop.play();
+                    images();
                     score+=10;
                     currentScore+=10;
                     fishTracker[0]++;
@@ -633,6 +634,7 @@ function hit(event) {
                     hitText.innerText = "+20";
                     hitText.style.color = "#9766d3";
                     rareBlop.play();
+                    images();
                     score+=20;
                     currentScore+=20;
                     fishTracker[1]++;
